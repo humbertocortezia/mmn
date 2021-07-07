@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=${postgres}
+      - POSTGRES_PASSWORD=${mmn}
+    volumes:
+      - ./postgres:/var/lib/postgres/data
+    ports:
+      - "5432:5432"

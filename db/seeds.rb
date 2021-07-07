@@ -22,7 +22,8 @@ Cadastro.create!(
     nome_usuario:'mario12',
     cpf:'01254625412',
     rg:'1523654',
-    data_nascimento: DateTime.now)
+    data_nascimento: DateTime.now,
+    cadastro_id: 1)
 Cadastro.create!(
     patrocinador:'joao23',
     nome:'Gomes Soares',
@@ -30,4 +31,5 @@ Cadastro.create!(
     nome_usuario:'soares99',
     cpf:'01254625412',
     rg:'1523654',
-    data_nascimento: DateTime.now)
+    data_nascimento: DateTime.now,
+    cadastro_id: 1)

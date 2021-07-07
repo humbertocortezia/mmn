@@ -8,6 +8,7 @@ class CreateCadastros < ActiveRecord::Migration[6.1]
       t.string :rg
       t.date :data_nascimento
       t.string :nome_usuario
+      t.references :cadastro, foreign_key: true
 
       t.timestamps
     end

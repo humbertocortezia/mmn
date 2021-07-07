@@ -23,8 +23,11 @@ ActiveRecord::Schema.define(version: 2021_07_07_115558) do
     t.string "rg"
     t.date "data_nascimento"
     t.string "nome_usuario"
+    t.bigint "cadastro_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cadastro_id"], name: "index_cadastros_on_cadastro_id"
   end
 
+  add_foreign_key "cadastros", "cadastros"
 end
