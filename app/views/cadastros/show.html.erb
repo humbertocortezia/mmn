@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patrocinador:</strong>
+  <%= @cadastro.patrocinador %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cadastro.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cadastro.email %>
+</p>
+
+<p>
+  <strong>Email2:</strong>
+  <%= @cadastro.email2 %>
+</p>
+
+<p>
+  <strong>Nome usuario:</strong>
+  <%= @cadastro.nome_usuario %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @cadastro.cpf %>
+</p>
+
+<p>
+  <strong>Rg:</strong>
+  <%= @cadastro.rg %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @cadastro.data_nascimento %>
+</p>
+
+<%= link_to 'Edit', edit_cadastro_path(@cadastro) %> |
+<%= link_to 'Back', cadastros_path %>
