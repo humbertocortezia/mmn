@@ -3,14 +3,15 @@ class CadastrosController < ApplicationController
 
   # GET /cadastros or /cadastros.json
   def index
-    @patrocinador = Cadastro.where(id: 1)
-    @cadastros = Cadastro.where(patrocinador: @patrocinador.patrocinador)
+    @patrocinador = Cadastro.where(id:1).take
+    @cadastros = Cadastro.where.uniq.(patrocinador: @patrocinador.nome_usuario)
   end
 
   # GET /cadastros/1 or /cadastros/1.json
   def show
-    @patrocinador = Cadastro.where(id: id)
-    @cadastros = Cadastro.where(patrocinador: @patrocinador.patrocinador)
+    # @cadastros = Cadastro.select("PATROCINADOR","string_agg(NOME_USUARIO, ', ') AS actor_list").where("patrocinador !=''")
+    @patrocinador = Cadastro.where(id: params[:id]).take
+    @cadastros = Cadastro.where.uniq.(patrocinador: @patrocinador.nome_usuario)
   end
 
   # GET /cadastros/new

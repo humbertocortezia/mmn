@@ -1,39 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Cadastros</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Patrocinador</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Cpf</th>
-      <th>Rg</th>
-      <th>Data nascimento</th>
-      <th>Nome usuario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @cadastros.each do |cadastro| %>
-      <tr>
-        <td><%= cadastro.patrocinador %></td>
-        <td><%= cadastro.nome %></td>
-        <td><%= cadastro.email %></td>
-        <td><%= cadastro.cpf %></td>
-        <td><%= cadastro.rg %></td>
-        <td><%= cadastro.data_nascimento %></td>
-        <td><%= cadastro.nome_usuario %></td>
-        <td><%= link_to 'Show', cadastro %></td>
-        <td><%= link_to 'Edit', edit_cadastro_path(cadastro) %></td>
-        <td><%= link_to 'Destroy', cadastro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="tree">
+<% @cadastros.each do |cadastro| %>
+   <ul>
+      <li>
+            <% if cadastro.patrocinador %>
+         <div class="family">
+            <div class="person child male">
+               <div class="name"><%= cadastro.patrocinador %></div>
+            </div>
+            <%end%>
+              <ul>
+                  <li>
+                <div class="family" style="width: 172px">
+                  <div class="person child male">
+                      <div class="name"><%= cadastro.nome_usuario %></div>
+                </div>
+                <%end%>
 
 <%= link_to 'New Cadastro', new_cadastro_path %>

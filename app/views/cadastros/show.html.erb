@@ -1,39 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Patrocinador:</strong>
-  <%= @cadastro.patrocinador %>
-</p>
-
-<p>
-  <strong>Nome:</strong>
-  <%= @cadastro.nome %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @cadastro.email %>
-</p>
-
-<p>
-  <strong>Cpf:</strong>
-  <%= @cadastro.cpf %>
-</p>
-
-<p>
-  <strong>Rg:</strong>
-  <%= @cadastro.rg %>
-</p>
-
-<p>
-  <strong>Data nascimento:</strong>
-  <%= @cadastro.data_nascimento %>
-</p>
-
-<p>
-  <strong>Nome usuario:</strong>
-  <%= @cadastro.nome_usuario %>
-</p>
-
-<%= link_to 'Edit', edit_cadastro_path(@cadastro) %> |
-<%= link_to 'Back', cadastros_path %>
+<div class="tree">
+<% @cadastros.each do |cadastro| %>
+   <ul>
+      <li>
+         <div class="family">
+            <div class="person child male">
+               <div class="name"><%= cadastro.patrocinador %></div>
+            </div>
+              <ul>
+                  <li>
+                <div class="family" style="width: 172px">
+                  <div class="person child male">
+                      <div class="name"><%= cadastro.nome_usuario %></div>
+                </div>
+                <%end%>
