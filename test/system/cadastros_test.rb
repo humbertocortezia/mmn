@@ -17,7 +17,6 @@ class CadastrosTest < ApplicationSystemTestCase
     fill_in "Cpf", with: @cadastro.cpf
     fill_in "Data nascimento", with: @cadastro.data_nascimento
     fill_in "Email", with: @cadastro.email
-    fill_in "Email2", with: @cadastro.email2
     fill_in "Nome", with: @cadastro.nome
     fill_in "Nome usuario", with: @cadastro.nome_usuario
     fill_in "Patrocinador", with: @cadastro.patrocinador
@@ -35,7 +34,6 @@ class CadastrosTest < ApplicationSystemTestCase
     fill_in "Cpf", with: @cadastro.cpf
     fill_in "Data nascimento", with: @cadastro.data_nascimento
     fill_in "Email", with: @cadastro.email
-    fill_in "Email2", with: @cadastro.email2
     fill_in "Nome", with: @cadastro.nome
     fill_in "Nome usuario", with: @cadastro.nome_usuario
     fill_in "Patrocinador", with: @cadastro.patrocinador

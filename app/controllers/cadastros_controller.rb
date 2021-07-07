@@ -3,11 +3,14 @@ class CadastrosController < ApplicationController
 
   # GET /cadastros or /cadastros.json
   def index
-    @cadastros = Cadastro.all
+    @patrocinador = Cadastro.where(id: 1)
+    @cadastros = Cadastro.where(patrocinador: @patrocinador.patrocinador)
   end
 
   # GET /cadastros/1 or /cadastros/1.json
   def show
+    @patrocinador = Cadastro.where(id: id)
+    @cadastros = Cadastro.where(patrocinador: @patrocinador.patrocinador)
   end
 
   # GET /cadastros/new
@@ -64,6 +67,6 @@ class CadastrosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cadastro_params
-      params.require(:cadastro).permit(:patrocinador, :nome, :email, :email2, :nome_usuario, :cpf, :rg, :data_nascimento)
+      params.require(:cadastro).permit(:patrocinador, :nome, :email, :cpf, :rg, :data_nascimento, :nome_usuario)
     end
 end

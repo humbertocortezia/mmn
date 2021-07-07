@@ -4,18 +4,16 @@ one:
   patrocinador: MyString
   nome: MyString
   email: MyString
-  email2: MyString
-  nome_usuario: MyString
   cpf: MyString
   rg: MyString
   data_nascimento: 2021-07-06
+  nome_usuario: MyString
 
 two:
   patrocinador: MyString
   nome: MyString
   email: MyString
-  email2: MyString
-  nome_usuario: MyString
   cpf: MyString
   rg: MyString
   data_nascimento: 2021-07-06
+  nome_usuario: MyString

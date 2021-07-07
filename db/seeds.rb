@@ -7,12 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Cadastro.create!(
-    patrocinador:'joão23',
+    patrocinador:'',
+    nome:'João Eduardo',
+    email:'joao@gmail.com',
+    nome_usuario:'joao23',
+    cpf:'01254625412',
+    rg:'1523654',
+    data_nascimento: 1988-07-06)
+
+Cadastro.create!(
+    patrocinador:'joao23',
     nome:'Mario Eduardo da Silva',
     email:'mario@gmail.com',
-    email2:'mario@gmail.com',
     nome_usuario:'mario12',
     cpf:'01254625412',
     rg:'1523654',
-    data_nascimento: 1988-07-06
-)
+    data_nascimento: 1988-07-06)
+Cadastro.create!(
+    patrocinador:'joao23',
+    nome:'Gomes Soares',
+    email:'soares@gmail.com',
+    nome_usuario:'soares99',
+    cpf:'01254625412',
+    rg:'1523654',
+    data_nascimento: 1988-07-06)

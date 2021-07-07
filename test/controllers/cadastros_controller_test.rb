@@ -17,7 +17,7 @@ class CadastrosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cadastro" do
     assert_difference('Cadastro.count') do
-      post cadastros_url, params: { cadastro: { cpf: @cadastro.cpf, data_nascimento: @cadastro.data_nascimento, email: @cadastro.email, email2: @cadastro.email2, nome: @cadastro.nome, nome_usuario: @cadastro.nome_usuario, patrocinador: @cadastro.patrocinador, rg: @cadastro.rg } }
+      post cadastros_url, params: { cadastro: { cpf: @cadastro.cpf, data_nascimento: @cadastro.data_nascimento, email: @cadastro.email, nome: @cadastro.nome, nome_usuario: @cadastro.nome_usuario, patrocinador: @cadastro.patrocinador, rg: @cadastro.rg } }
     end
 
     assert_redirected_to cadastro_url(Cadastro.last)
@@ -34,7 +34,7 @@ class CadastrosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cadastro" do
-    patch cadastro_url(@cadastro), params: { cadastro: { cpf: @cadastro.cpf, data_nascimento: @cadastro.data_nascimento, email: @cadastro.email, email2: @cadastro.email2, nome: @cadastro.nome, nome_usuario: @cadastro.nome_usuario, patrocinador: @cadastro.patrocinador, rg: @cadastro.rg } }
+    patch cadastro_url(@cadastro), params: { cadastro: { cpf: @cadastro.cpf, data_nascimento: @cadastro.data_nascimento, email: @cadastro.email, nome: @cadastro.nome, nome_usuario: @cadastro.nome_usuario, patrocinador: @cadastro.patrocinador, rg: @cadastro.rg } }
     assert_redirected_to cadastro_url(@cadastro)
   end
 
