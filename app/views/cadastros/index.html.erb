@@ -1,24 +1,26 @@
-<div class="tree">
-   <ul>
-   <li>
-      <div class="person female">
-         <div class="name"><%= @patrocinador.nome_usuario %></div>
-      </div>
-      <ul>
+      <%@teste = '' %> 
       <% @cadastros.each do |cadastro| %>
-   <li>
-      <div class="tree">
-         <div class="family" style="width: 172px">
-            <div class="person female">
-             <div class="name"><%= cadastro.patrocinador  %></div>
-         </div>
-      </div>
-      <div class="family" style="width: 172px">
-         <div class="person child male">
-            <div class="name"><%= cadastro.nome_usuario %></div>
-         </div>
-      </div>
+         <% if @teste != cadastro.cadastro_id %>
+            <div class="tree">
+               <ul>
+                  <li>
+                     <div class="family">
+                        <div class="person child male">
+                           <div class="name"><%= cadastro.patrocinador  %></div>
+                        </div>
+                        <ul>
+                         <li>
+                            <div class="family" style="width: 172px">
+                               <div class="person child male">
+                                  <div class="name"><%= cadastro.nome_usuario  %></div>
+                               </div>
+                            </div>
+                         </li>
+               <%@teste = cadastro.cadastro_id%>
+         <%end%>
       <%end%>
+      </li>
+    </ul>
 </div>
 
 <%= link_to 'New Cadastro', new_cadastro_path %>

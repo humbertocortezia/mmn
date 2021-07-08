@@ -4,7 +4,9 @@ class CadastrosController < ApplicationController
   # GET /cadastros or /cadastros.json
   def index
     @patrocinador = Cadastro.where(id:1).take
-    @cadastros = Cadastro.all.order('cadastro_id, id')
+    @cadastros = Cadastro.all.order('cadastro_id, id').where("cadastro_id IS NOT NULL") 
+    # @cadastros = Cadastros.select.order("cadastro_id,patrocinador,nome_usuario").where("cadastro_id")(Cadastro.where(cadastro_id: nill)
+
   end
 
   # GET /cadastros/1 or /cadastros/1.json
